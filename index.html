@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title> Poli Nemkova – AI & NLP Research</title>
+  <title>Apollinaria Poli Nemkova – AI & NLP Research</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
     content="Apollinaria Poli Nemkova – AI & NLP researcher focusing on large language models, multilingual systems, and responsible AI with applications in humanitarian and governance domains."
   />
-  <link rel="icon" href="favicon.jpeg" type="image/jpeg">
+  <link rel="icon" href="favicon.jpeg" type="image/png">
 
   <style>
     /* --------- Base styles --------- */
@@ -25,18 +25,18 @@
       padding: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: #f5f5f7;
-      color: #111111;
+      color: #374151;  /* dark grey */
       line-height: 1.7;
       font-size: 16px;
     }
 
     a {
-      color: #111827;
+      color: #374151; /* dark grey */
       text-decoration: none;
     }
 
     a:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
 
     /* --------- Layout & global --------- */
@@ -44,9 +44,9 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      background: rgba(245, 245, 247, 0.96);
-      backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+      background: rgba(248, 250, 252, 0.96); /* softer, gallery-like */
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.4); /* light grey border */
     }
 
     .nav-inner {
@@ -65,25 +65,42 @@
       font-size: 1.05rem;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: #020617;
+      color: #1f2937;
       white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
       flex-wrap: wrap;
-      gap: 1.8rem;                /* wider spacing between items */
-      font-size: 0.78rem;         /* slightly smaller text */
+      gap: 1.4rem;
+      font-size: 0.78rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
     }
 
     .nav-links a {
-      color: #9ca3af;             /* light grey */
+      position: relative;
+      color: #9ca3af;  /* light grey by default */
+      padding-bottom: 0.15rem;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background: #4b5563;  /* mid-grey underline */
+      transition: width 0.25s ease;
     }
 
     .nav-links a:hover {
-      color: #374151;             /* darker grey on hover */
+      color: #4b5563;  /* slightly darker on hover */
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
     }
 
     .hero {
@@ -103,6 +120,7 @@
       font-weight: 500;
       letter-spacing: 0.12em;
       text-transform: uppercase;
+      color: #1f2937;
     }
 
     .hero-subtitle {
@@ -117,7 +135,7 @@
     .hero p {
       margin: 0 0 1.5rem;
       max-width: 40rem;
-      color: #111827;
+      color: #374151;
     }
 
     .hero-buttons {
@@ -134,19 +152,22 @@
       font-size: 0.8rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
-      border: 1px solid #111827;
+      border: 1px solid #374151;
       background: transparent;
-      color: #111827;
+      color: #374151;
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
     }
 
     .btn-primary {
-      background: #111827;
+      background: #374151;
       color: #f9fafb;
     }
 
     .btn:hover {
       text-decoration: none;
-      filter: brightness(1.03);
+      background: #111827;
+      border-color: #111827;
+      color: #f9fafb;
     }
 
     .hero-image-wrapper {
@@ -155,11 +176,11 @@
     }
 
     .hero img {
-      max-width: 260px;
+      max-width: 280px;
       width: 100%;
-      border-radius: 22px;
-      border: 1px solid rgba(15, 23, 42, 0.08);
-      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+      border-radius: 24px;
+      border: 1px solid rgba(55, 65, 81, 0.15);
+      box-shadow: 0 22px 55px rgba(15, 23, 42, 0.18);
       object-fit: cover;
       background: #e5e7eb;
     }
@@ -172,7 +193,7 @@
 
     section {
       padding: 2.3rem 0 2.1rem;
-      border-top: 1px solid rgba(15, 23, 42, 0.06);
+      border-top: 1px solid rgba(148, 163, 184, 0.4);
     }
 
     section:first-of-type {
@@ -186,13 +207,13 @@
       font-weight: 500;
       letter-spacing: 0.20em;
       text-transform: uppercase;
-      color: #020617;
+      color: #1f2937;
     }
 
     section p {
       margin: 0 0 0.9rem;
       max-width: 50rem;
-      color: #111827;
+      color: #374151;
     }
 
     .two-col {
@@ -205,13 +226,13 @@
     .subheading {
       font-weight: 600;
       margin-bottom: 0.2rem;
-      color: #020617;
+      color: #1f2937;
     }
 
     ul {
       padding-left: 1.2rem;
       margin: 0.3rem 0 0.9rem;
-      color: #111827;
+      color: #374151;
     }
 
     li {
@@ -225,7 +246,7 @@
 
     /* --------- Footer --------- */
     footer {
-      border-top: 1px solid rgba(15, 23, 42, 0.06);
+      border-top: 1px solid rgba(148, 163, 184, 0.4);
       padding: 1.6rem 1.5rem 2.3rem;
       text-align: center;
       font-size: 0.85rem;
@@ -242,7 +263,7 @@
         justify-content: flex-start;
       }
       .hero img {
-        max-width: 220px;
+        max-width: 240px;
       }
       .two-col {
         grid-template-columns: minmax(0, 1fr);
@@ -254,10 +275,10 @@
       .nav-title {
         width: 100%;
         text-align: center;
+        margin-bottom: 0.3rem;
       }
       .nav-links {
         justify-content: center;
-        gap: 1.1rem;   /* slightly tighter on mobile */
       }
     }
 
@@ -284,8 +305,8 @@
         <a href="#research">Research</a>
         <a href="#teaching">Teaching</a>
         <a href="#publications">Publications</a>
-        <a href="#talks">Talks</a>
         <a href="#impact">Impact</a>
+        <a href="#work-with-me">Work with me</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -294,7 +315,7 @@
   <!-- Hero -->
   <section class="hero" id="top">
     <div>
-      <h1>Poli Nemkova</h1>
+      <h1>Apollinaria Poli Nemkova</h1>
       <p class="hero-subtitle">
         AI &amp; NLP Research · Large Language Models · Multilingual Systems
       </p>
@@ -567,48 +588,6 @@
            target="_blank" rel="noopener noreferrer">Google Scholar profile</a>
         and in my CV.
       </p>
-    </section>
-
-    <!-- Talks -->
-    <section id="talks">
-      <h2>Talks</h2>
-      <p>
-        Selected invited talks and public engagements on AI, NLP, conflict, and AI for social good.
-      </p>
-      <ul>
-        <li>
-          <strong>Invited Talk, Department of Mathematics</strong> — Southern Methodist University (SMU), Dallas, TX<br />
-          <span class="meta-note">October 2025.</span>
-        </li>
-        <li>
-          <strong>Lecture on AI Applications in Health</strong> — Texas Tech University Health Sciences Center, Dallas, TX<br />
-          <span class="meta-note">October 2025.</span>
-        </li>
-        <li>
-          <strong>AI for Social Good Workshop (Host and Lead)</strong> — São Paulo / San Paolo, Brazil<br />
-          <span class="meta-note">August 2025.</span>
-        </li>
-        <li>
-          <strong>AAAI 2025 – AI for Social Impact Track</strong><br />
-          <span class="meta-note">Two talks on AI for social impact across finance, social media, and crime prevention, February 2025.</span>
-        </li>
-        <li>
-          <strong>Towards Peace through AI Research</strong> — Conflict and Resilience Research Institute Canada (CRRIC), University of Winnipeg<br />
-          <span class="meta-note">January 2023.</span>
-        </li>
-        <li>
-          <strong>Algorithms and AI as an Artistic Protocol</strong> — Performance at “Education as Experimentation 3” Symposium<br />
-          <span class="meta-note">Onstead Institute &amp; Department of Art Education, University of North Texas, October 2022.</span>
-        </li>
-        <li>
-          <strong>AI in Media Warfare</strong> — CRRIC, University of Winnipeg<br />
-          <span class="meta-note">August 2022.</span>
-        </li>
-        <li>
-          <strong>Guest Speaker on Data Science &amp; AI</strong> — “Data Science in Academia”<br />
-          <span class="meta-note">January 2022.</span>
-        </li>
-      </ul>
     </section>
 
     <!-- Thoughts -->
